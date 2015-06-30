@@ -16,7 +16,7 @@
 		<property name="name" value="Zara" />
 		<property name="age" value="11" />
 	</bean>
-	
+
 	<!-- ######################Annotation Based Configuration AutoWired -->
 	<!-- Definition for textEditor bean without constructor-arg -->
 	<bean id="textEditorSetter"
@@ -39,19 +39,32 @@
 
 	<!-- ######################Annotation Based Configuration Qualifier -->
 	<!-- Definition for profile bean -->
-	<bean id="profile" class="com.tutorialspoint.annotationbasedconfiguration.qualifier.Profile">
+	<bean id="profile"
+		class="com.tutorialspoint.annotationbasedconfiguration.qualifier.Profile">
 	</bean>
 
 	<!-- Definition for student1 bean -->
-	<bean id="student1" class="com.tutorialspoint.annotationbasedconfiguration.qualifier.Student">
+	<bean id="student1"
+		class="com.tutorialspoint.annotationbasedconfiguration.qualifier.Student">
 		<property name="name" value="Zara" />
 		<property name="age" value="11" />
 	</bean>
 
 	<!-- Definition for student2 bean -->
-	<bean id="student2" class="com.tutorialspoint.annotationbasedconfiguration.qualifier.Student">
+	<bean id="student2"
+		class="com.tutorialspoint.annotationbasedconfiguration.qualifier.Student">
 		<property name="name" value="Nuha" />
 		<property name="age" value="2" />
+	</bean>
+
+	<!-- ######################Annotation Based Configuration JSR-250 -->
+	<bean id="helloWorld" class="com.tutorialspoint.annotationbasedconfiguration.jsr250.HelloWorld"
+		init-method="init" destroy-method="destroy">
+		<property name="message" value="Hello World!" />
+	</bean>
+	
+	<bean id="textEditorJSR250"
+		class="com.tutorialspoint.annotationbasedconfiguration.jsr250.TextEditor">
 	</bean>
 
 </beans>
