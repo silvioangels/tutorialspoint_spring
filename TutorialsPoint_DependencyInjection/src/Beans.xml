@@ -2,6 +2,7 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	
@@ -34,6 +35,24 @@
 	<!-- Definition for spellChecker bean -->
 	<bean id="spellCheckerSetter" class="com.tutorialspoint.setter.SpellChecker">
 	</bean>
+	
+	<!-- ########################################## standard XML configuration Without Namespace -->
+	<bean id="john-classic" class="com.example.Person">
+		<property name="name" value="John Doe" />
+		<property name="spouse" ref="jane"/>
+	</bean>
+	
+	<bean name="jane" class="com.example.Person">
+      <property name="name" value="Janet Doe"/>
+   </bean>
+   
+   <!-- ########################################## standard XML configuration With Namespace -->
+   <bean id="john-classic-namespace" class="com.example.Person"
+      	 p:name="John Doe namespace"
+      	 p:spouse-ref="jane-namespace"/>
 
+   <bean name="jane-namespace" 
+   		 class="com.example.Person"
+      	 p:name="Janet Doe namespace"/>
 
 </beans>
