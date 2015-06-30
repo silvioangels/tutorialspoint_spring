@@ -23,5 +23,7 @@
 	<classpathentry kind="lib" path="libs/spring-webmvc-4.1.6.RELEASE.jar"/>
 	<classpathentry kind="lib" path="libs/spring-webmvc-portlet-4.1.6.RELEASE.jar"/>
 	<classpathentry kind="lib" path="libs/spring-websocket-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/asm-5.0.4.jar"/>
+	<classpathentry kind="lib" path="libs/cglib-2.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
