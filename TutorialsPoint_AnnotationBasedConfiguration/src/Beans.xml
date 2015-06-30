@@ -9,10 +9,26 @@
 
 	<context:annotation-config />
 
+	<!-- ######################Annotation Based Configuration Required -->
 	<!-- Definition for student bean -->
-	<bean id="student" class="com.tutorialspoint.annotationbasedconfiguration.required.Student">
+	<bean id="student"
+		class="com.tutorialspoint.annotationbasedconfiguration.required.Student">
 		<property name="name" value="Zara" />
-		<property name="age" value="11"/>
+		<property name="age" value="11" />
+	</bean>
+
+	<!-- Definition for textEditor bean without constructor-arg -->
+	<bean id="textEditorSetter" class="com.tutorialspoint.annotationbasedconfiguration.autowired.TextEditorSetter">
+	</bean>
+	
+	<bean id="textEditorAutoWiredProperties" class="com.tutorialspoint.annotationbasedconfiguration.autowired.TextEditorAutoWiredProperties">
+	</bean>
+	
+	<bean id="textEditorConstructor" class="com.tutorialspoint.annotationbasedconfiguration.autowired.TextEditorConstructor">
+	</bean>
+
+	<!-- Definition for spellChecker bean -->
+	<bean id="spellChecker" class="com.tutorialspoint.annotationbasedconfiguration.autowired.SpellChecker">
 	</bean>
 
 </beans>
