@@ -4,14 +4,15 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-
+	
+	<!-- ##########################################Constructor Based Application -->
 	<!-- Definition for textEditor bean -->
-	<bean id="textEditor" class="com.tutorialspoint.TextEditor">
-		<constructor-arg ref="spellChecker" />
+	<bean id="textEditorConstructor" class="com.tutorialspoint.constructor.TextEditor">
+		<constructor-arg ref="spellCheckerConstructor" />
 	</bean>
 
 	<!-- Definition for spellChecker bean -->
-	<bean id="spellChecker" class="com.tutorialspoint.SpellChecker">
+	<bean id="spellCheckerConstructor" class="com.tutorialspoint.constructor.SpellChecker">
 	</bean>
 
 	<bean id="fooBean" class="x.y.Foo">
@@ -23,5 +24,16 @@
 		<constructor-arg index="1" value="Zara" />
 		<constructor-arg index="0" value="2001" />
 	</bean>
+
+	<!-- ##########################################Setter Based Application -->
+	<!-- Definition for textEditor bean -->
+	<bean id="textEditorSetter" class="com.tutorialspoint.setter.TextEditor">
+		<property name="spellChecker" ref="spellCheckerSetter" />
+	</bean>
+
+	<!-- Definition for spellChecker bean -->
+	<bean id="spellCheckerSetter" class="com.tutorialspoint.setter.SpellChecker">
+	</bean>
+
 
 </beans>
