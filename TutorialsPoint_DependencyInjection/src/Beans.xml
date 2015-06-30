@@ -14,4 +14,14 @@
 	<bean id="spellChecker" class="com.tutorialspoint.SpellChecker">
 	</bean>
 
+	<bean id="fooBean" class="x.y.Foo">
+		<constructor-arg type="int" value="2001" />
+		<constructor-arg type="java.lang.String" value="Zara" />
+	</bean>
+
+	<bean id="fooIndexBean" class="x.y.FooIndex">
+		<constructor-arg index="1" value="Zara" />
+		<constructor-arg index="0" value="2001" />
+	</bean>
+
 </beans>
