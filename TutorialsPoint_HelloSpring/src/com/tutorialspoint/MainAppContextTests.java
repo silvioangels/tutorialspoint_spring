@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
-public class MainApp {
+public class MainAppContextTests {
 
 	public static void main(String[] args) {
 
@@ -37,7 +37,7 @@ public class MainApp {
 	private static void fileSystemXmlApplicationContextTest() {
 
 		ApplicationContext context = new FileSystemXmlApplicationContext(
-				"C:/studyspace/workspace/TutorialsPoint_HelloSpring/src/Beans.xml");
+				"C:/GitHubRepository/tutorialspoint_spring/TutorialsPoint_HelloSpring/src/Beans.xml");
 
 		HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
 		obj.getMessage();
