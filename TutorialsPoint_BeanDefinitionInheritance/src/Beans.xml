@@ -5,13 +5,15 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<bean id="helloWorld" class="com.tutorialspoint.HelloWorld"
-		init-method="init" destroy-method="destroy">
-
-		<property name="message" value="Hello World!" />
-
+	<bean id="helloWorld" class="com.tutorialspoint.HelloWorld">
+		<property name="message1" value="Hello World!" />
+		<property name="message2" value="Hello Second World!" />
 	</bean>
 
-	<bean class="com.tutorialspoint.InitHelloWorld" />
+	<bean id="helloIndia" class="com.tutorialspoint.HelloIndia"
+		parent="helloWorld">
+		<property name="message1" value="Hello India!" />
+		<property name="message3" value="Namaste India!" />
+	</bean>
 
 </beans>
