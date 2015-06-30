@@ -7,6 +7,13 @@ public class MainApp {
 
 	public static void main(String[] args) {
 
+		inheritanceSpringExample();
+		abstractInheritanceSpringExample();
+
+	}
+	
+	private static void inheritanceSpringExample(){
+		System.out.println("########################################");
 		ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 
 		HelloWorld objA = (HelloWorld) context.getBean("helloWorld");
@@ -18,7 +25,18 @@ public class MainApp {
 		objB.getMessage1();
 		objB.getMessage2();
 		objB.getMessage3();
+		
+	}
+	
+	private static void abstractInheritanceSpringExample(){
+		System.out.println("########################################");
+		ApplicationContext context = new ClassPathXmlApplicationContext("BeansAbstract.xml");
 
+		HelloIndia obj = (HelloIndia) context.getBean("helloIndia");
+		obj.getMessage1();
+		obj.getMessage2();
+		obj.getMessage3();
+		
 	}
 
 }
