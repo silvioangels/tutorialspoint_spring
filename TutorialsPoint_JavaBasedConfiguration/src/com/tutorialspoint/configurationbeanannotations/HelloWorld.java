@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.tutorialspoint.configurationbeanannotations;
 
 public class HelloWorld {
 

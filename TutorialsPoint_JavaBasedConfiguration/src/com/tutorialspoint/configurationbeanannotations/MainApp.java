@@ -1,9 +1,9 @@
-package com.tutorialspoint;
+package com.tutorialspoint.configurationbeanannotations;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class MainAppConfigurationBeanAnnotations {
+public class MainApp {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(HelloWorldConfig.class);

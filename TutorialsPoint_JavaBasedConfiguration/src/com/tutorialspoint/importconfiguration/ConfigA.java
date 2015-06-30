@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.tutorialspoint.importconfiguration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
