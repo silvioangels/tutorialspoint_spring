@@ -1,47 +1,43 @@
 package com.tutorialspoint;
 
-import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
-import org.springframework.core.io.ClassPathResource;
 
 public class MainApp {
 
 	public static void main(String[] args) {
 
-		applicationContextTest();
-		xmlBeanFactoryTest();
-		fileSystemXmlApplicationContextTest();
+		beanScopeSingleton();
+		beanScopePrototype();
 
 	}
 
-	private static void applicationContextTest() {
-
+	private static void beanScopeSingleton() {
+		System.out.println("#######################################################");
 		ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 
-		HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
-		obj.getMessage();
+		HelloWorld objA = (HelloWorld) context.getBean("helloWorld");
+
+		objA.setMessage("I'm object A");
+		objA.getMessage();
+
+		HelloWorld objB = (HelloWorld) context.getBean("helloWorld");
+		objB.getMessage();
 
 	}
 	
-	private static void xmlBeanFactoryTest() {
+	private static void beanScopePrototype() {
+		System.out.println("#######################################################");
+		ApplicationContext context = new ClassPathXmlApplicationContext("BeansPrototype.xml");
 
-		XmlBeanFactory factory = new XmlBeanFactory(new ClassPathResource("Beans.xml"));
+		HelloWorld objA = (HelloWorld) context.getBean("helloWorld");
 
-		HelloWorld obj = (HelloWorld) factory.getBean("helloWorld");
-		obj.getMessage();
+		objA.setMessage("I'm object A");
+		objA.getMessage();
 
-	} 
-	
-	private static void fileSystemXmlApplicationContextTest() {
+		HelloWorld objB = (HelloWorld) context.getBean("helloWorld");
+		objB.getMessage();
 
-		ApplicationContext context = new FileSystemXmlApplicationContext(
-				"C:/GitHubRepository/tutorialspoint_spring/TutorialsPoint_HelloSpring/src/Beans.xml");
-
-		HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
-		obj.getMessage();
-
-	} 
+	}
 
 }
