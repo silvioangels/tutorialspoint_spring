@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.tutorialspoint.storeprocedures;
 
 public class Student {
 

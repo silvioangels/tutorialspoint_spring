@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.tutorialspoint.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

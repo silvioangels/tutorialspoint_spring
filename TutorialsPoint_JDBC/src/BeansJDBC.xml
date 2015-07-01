@@ -14,7 +14,7 @@
 	</bean>
 
 	<!-- Definition for studentJDBCTemplate bean -->
-	<bean id="studentJDBCTemplate" class="com.tutorialspoint.StudentJDBCTemplate">
+	<bean id="studentJDBCTemplate" class="com.tutorialspoint.jdbc.StudentJDBCTemplate">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 

@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.tutorialspoint.storeprocedures;
 
 import java.util.List;
 
@@ -28,16 +28,5 @@ public interface StudentDAO {
 	 * Student table.
 	 */
 	public List<Student> listStudents();
-
-	/**
-	 * This is the method to be used to delete a record from the Student table
-	 * corresponding to a passed student id.
-	 */
-	public void delete(Integer id);
-
-	/**
-	 * This is the method to be used to update a record into the Student table.
-	 */
-	public void update(Integer id, Integer age);
 
 }

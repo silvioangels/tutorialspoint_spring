@@ -1,15 +1,16 @@
-package com.tutorialspoint;
+package com.tutorialspoint.jdbc;
 
 import java.util.List;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import com.tutorialspoint.StudentJDBCTemplate;
+
+import com.tutorialspoint.jdbc.StudentJDBCTemplate;
 
 public class MainApp {
 
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("BeansJDBC.xml");
 
 		StudentJDBCTemplate studentJDBCTemplate = (StudentJDBCTemplate) context.getBean("studentJDBCTemplate");
 

@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.tutorialspoint.jdbc;
 
 import java.util.List;
 
