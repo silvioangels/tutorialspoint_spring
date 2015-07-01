@@ -5,13 +5,12 @@
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd ">
 
 	<!-- Initialization for data source -->
-	<bean 	id="dataSource"
-			class="org.springframework.jdbc.datasource.DriverManagerDataSource"
-			scope="singleton" destroy-method="close">
-		<property name="driverClassName" value="sun.jdbc.odbc.JdbcOdbcDriver"/>
-		<property name="url" value="jdbc:odbc:;DRIVER=Microsoft Access Driver (*.accdb);DBQ=${java.io.tmpdir}\TEST.accdb;"/>
-		<property name="username" value=""/>
-        <property name="password" value=""/>
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/test" />
+		<property name="username" value="root" />
+		<property name="password" value="admin" />
 	</bean>
 
 	<!-- Definition for studentJDBCTemplate bean -->
