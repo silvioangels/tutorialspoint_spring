@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.tutorialspoint.basic;
 
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextStoppedEvent;

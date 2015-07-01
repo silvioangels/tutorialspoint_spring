@@ -4,13 +4,19 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-
-	<bean id="helloWorld" class="com.tutorialspoint.HelloWorld">
+	
+	<!--############################### Basic Event Handling -->
+	<bean id="helloWorld" class="com.tutorialspoint.basic.HelloWorld">
 		<property name="message" value="Hello World!" />
 	</bean>
 
-	<bean id="cStartEventHandler" class="com.tutorialspoint.CStartEventHandler" />
+	<bean id="cStartEventHandler" class="com.tutorialspoint.basic.CStartEventHandler" />
 
-	<bean id="cStopEventHandler" class="com.tutorialspoint.CStopEventHandler" />
+	<bean id="cStopEventHandler" class="com.tutorialspoint.basic.CStopEventHandler" />
+
+	<!--############################### Custom Event Handling -->
+	<bean id="customEventHandler" class="com.tutorialspoint.custom.CustomEventHandler" />
+
+	<bean id="customEventPublisher" class="com.tutorialspoint.custom.CustomEventPublisher" />
 
 </beans>
