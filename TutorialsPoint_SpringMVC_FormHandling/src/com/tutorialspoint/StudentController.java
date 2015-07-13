@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class StudentController {
 	
-	@RequestMapping(value = "/student", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	   public ModelAndView student() {
 	      return new ModelAndView("student", "command", new Student());
 	   }
