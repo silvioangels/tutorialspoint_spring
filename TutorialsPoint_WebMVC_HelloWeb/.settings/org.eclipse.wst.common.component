@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="TutorialsPoint_WebMVC_HelloWeb">
-        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="TutorialsPoint_WebMVC_HelloWeb"/>
-        <property name="java-output-path" value="/TutorialsPoint_WebMVC_HelloWeb/build/classes"/>
-    </wb-module>
-</project-modules>
